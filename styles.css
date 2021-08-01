@@ -1,0 +1,89 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.container {
+  background-color: #9b59b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  height: 100vh;
+  
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  "AC C div mult"
+  "seven eight nine minus"
+  "four five six add"
+  "one two three equal"
+  "zero zero dot equal"
+  ;
+}
+
+.calcButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  border: 2px solid #95a5a6;
+}
+
+.calcButton:hover {
+  border: 2px solid #e17055;
+  color: #00cec9;
+}
+
+.displayer {
+  margin: 0;
+  padding: 0;
+  width: 410px;
+  height: 75px;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  font-family: Share Tech Mono, Montseraf, monospace;
+}
+.total {
+  padding: .5rem 0 .4rem 0;
+  color: white;
+  font-size: 13px;
+  word-wrap: break-word;
+}
+
+.output{
+  margin-top: 8px;
+  font-size:20px;
+  color:white;
+}
+
+
+.zero {
+  border-radius: 5px;
+  grid-area: zero;
+}
+
+.equal {
+  border-radius: 5px;
+  grid-area: equal;
+  background-color: #3498db;
+}
+.AC, .C {
+  background-color: #e74c3c;
+}
+.AC, .mult {
+  border-radius: 5px;
+}
+.dark-gray {
+  background-color: #1c2527;
+}
